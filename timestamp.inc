@@ -1,3 +1,18 @@
+//AbyssMorgan
+//%d:%02d:%02d:%02d (day hour minute second) 
+#define SecToTimeDay(%0)            ((%0) / 86400),(((%0) % 86400) / 3600),((((%0) % 86400) % 3600) / 60),((((%0) % 86400) % 3600) % 60) 
+#define MSToTimeDay(%0)                SecToTimeDay((%0)/1000) 
+
+//%02d:%02d:%02d (hour minute second) 
+#define SecToTime(%0)                ((%0) / 3600),(((%0) % 3600) / 60),(((%0) % 3600) % 60) 
+#define MSToTime(%0)                SecToTime((%0)/1000) 
+
+//%02d:%02d (minute second) 
+#define SecToTimeMini(%0)            ((%0) / 60),((%0) % 60) 
+#define MSToTimeMini(%0)            SecToTimeMini((%0)/1000)  
+
+
+
 static stock const
 	SECONDS_PER_MINUTE		= 60,
 	SECONDS_PER_HOUR		= 3600,
